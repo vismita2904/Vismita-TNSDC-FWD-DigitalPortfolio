@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Vismita S. Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+      scroll-behavior: smooth;
+    }
+
+    header {
+      background-color: #1f1f1f;
+      color: #fff;
+      padding: 20px 40px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h1 {
+      font-size: 24px;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 30px;
+    }
+
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #ff6600;
+    }
+
+    section {
+      padding: 80px 60px;
+    }
+
+    .about, .projects, .contact {
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .about h2, .projects h2, .contact h2 {
+      font-size: 32px;
+      margin-bottom: 20px;
+      color: #ff6600;
+    }
+
+    .about-content {
+      display: flex;
+      align-items: center;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+
+    .about img {
+      width: 220px;
+      border-radius: 50%;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .about p {
+      font-size: 18px;
+      line-height: 1.6;
+      color: #555;
+      flex: 1;
+    }
+
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      margin-top: 30px;
+    }
+
+    .project-card {
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      overflow: hidden;
+      transition: transform 0.3s;
+      cursor: pointer;
+      text-align: center;
+    }
+
+    .project-card:hover {
+      transform: scale(1.03);
+    }
+
+    .project-card img {
+      width: 50%;
+      height: 150
+      px;
+      object-fit: cover;
+    }
+
+    .project-card h3 {
+      padding: 15px;
+      font-size: 20px;
+      color: #333;
+    }
+
+    .contact form {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      margin-top: 30px;
+    }
+
+    .contact input, .contact textarea, .contact select {
+      padding: 12px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      width: 100%;
+    }
+
+    .contact button {
+      padding: 12px;
+      background-color: #ff6600;
+      color: #fff;
+      border: none;
+      font-weight: bold;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .contact button:hover {
+      background-color: #e65c00;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      background-color: #1f1f1f;
+      color: #aaa;
+    }
+
+    @media (max-width: 768px) {
+      .about-content {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .about img {
+        margin-bottom: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Welcome to My Portfolio</h1>
+    <nav>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="about" class="about">
+    <h2>About Me</h2>
+    <div class="about-content">
+      <img src="my photo.jpg" alt="Vismita S. Profile Photo">
+      <p>
+        I'm Vismita S., a Data Analyst, Creative Tech Student, and Prompt Engineer. I specialize in blending technical expertise with expressive design and meme-powered learning. My passion lies in making academic content interactive, culturally relatable, and fun. Whether it's building web-based tools or crafting engaging student experiences, I thrive on clarity, creativity, and collaboration.
+      </p>
+    </div>
+  </section>
+
+  <section id="projects" class="projects">
+  <a href="project1.html" class="project-card">
+    <img src="Make A Wish Sticker PNG Images (Transparent HD Photo Clipart).jpg" alt="Project 1 Concept">
+    <h3>WishGPT Live</h3>
+    <p style="padding: 0 15px; font-size: 15px; color: #555;">
+      A crowd-interactive web experience where students submit academic wishes and receive witty, twisted responses from a genie-themed AI. Each wish is followed by a short learning moment, blending humor with insight. Designed for student conclaves to spark engagement and laughter.
+    </p>
+  </a>
+
+  <a href="project2.html" class="project-card">
+    <img src="Design - Playground - Copy.jpg" alt="Project 2 Concept">
+    <h3>Prompt Playground</h3>
+    <p style="padding: 0 15px; font-size: 15px; color: #555;">
+      A hands-on sandbox for students to experiment with AI prompts, test outcomes, and remix responses. Features meme-powered challenges, Tamil-English cultural cues, and interactive guessing games. Built to spark curiosity and critical thinking through playful prompt engineering.
+    </p>
+  </a>
+</section>
+  <section id="contact" class="contact">
+    <h2>Contact Me</h2>
+    <form>
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <select name="reason">
+        <option value="">Reason for Contact</option>
+        <option value="collab">Collaboration</option>
+        <option value="feedback">Feedback</option>
+        <option value="hire">Hiring Inquiry</option>
+      </select>
+      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <footer>
+    &copy; 2025 Vismita S. All rights reserved.
+  </footer>
+
+</body>
+</html>
